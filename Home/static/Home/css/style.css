@@ -3,11 +3,6 @@ h1 {
   font-size: 400px;
 }
 
-.nav-container {
-  background-color: rgba(15, 98, 27, 0.826);
-  height: 200px;
-}
-
 .nav-container ul {
   list-style: none;
   display: flex;
@@ -28,12 +23,83 @@ h1 {
 }
 
 .nav-background {
-    background-color: green;
+  background-color: green;
   /* background-image: url("/static/Home/images/photo.jpeg"); */
   background-size: 3000px;
   background-repeat: no-repeat;
 }
 
-.custom-a{
-    color: black;
+.custom-a {
+  color: black;
 }
+
+.typewriter {
+  font-family: monospace;
+  font-size: 20px;
+  white-space: pre;
+  overflow: hidden;
+  border-right: 0.15em solid #160404;
+  animation: typing 3s linear 1 alternate, blink-caret;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+    height: 150px;
+  }
+
+  50% {
+    height: 140px;
+  }
+  100% {
+    width: 40%;
+    height: 150px;
+  }
+}
+
+@keyframes blink-caret {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #ed9b9b;
+  }
+}
+
+
+
+ .typewriter1 {
+  font-family: monospace;
+  /* font-size: 20px; */
+  /* white-space: pre; */
+  overflow: hidden;
+  
+   animation-name: typing1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: .5s;
+  animation-iteration-count: 1;
+  animation-direction:normal;
+
+}
+
+@keyframes typing1 {
+  from {
+    width: 0;
+  }
+
+  
+to {
+  width: 100%;
+  }
+} 
+
+/* @keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ed9b9b;
+  }
+} */
