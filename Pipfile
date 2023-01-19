@@ -7,6 +7,10 @@ name = "pypi"
 django = "==4.1.5"
 asgiref = "==3.6.0"
 sqlparse = "==0.4.3"
+pillow = "*"
+plotly = "*"
+chart-studio = "*"
+plotly-express = "*"
 
 [dev-packages]
 

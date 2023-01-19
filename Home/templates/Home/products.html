@@ -9,14 +9,12 @@
 
     <link rel="stylesheet" href="{% static 'Home/css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'Home/css/style.css' %}">
-    <!-- <script src="{% static 'Home/js/plotly.min.js' %}"></script> -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="{% static 'Home/js/plot.js' %}"></script>
+
+
     <title>Document</title>
 </head>
 
 <body>
-
     <div class="container-fluid nav-background">
         <nav class="navbar navbar-expand-sm navbar-dark nav-background py-3 ">
             <a class="navbar-brand" href="">
@@ -29,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item  active">
-                        <a style="color: white ;font-size: 20px;" class="nav-link" href="{% url 'home' %}">Home</a>
+                        <a style="color: white;font-size: 20px;" class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a style="color: white ;font-size: 20px;" class="nav-link "
@@ -37,36 +35,65 @@
                     </li>
                     <li class="nav-item">
                         <a style="color: white ;font-size: 20px;" class="nav-link "
-                            href="{% url 'products' %}">Price</a>
+                            href="{% url 'products' %}">Products</a>
                     </li>
 
                 </ul>
             </div>
         </nav>
     </div>
-
-    <div class="container my-3">
+    <div class="container">
         <div class="row">
-            <div class="col-md-12 col-sm-12 mt-3 mx-3" style="background-color: #a8e99b;border-radius:15px;">
-                <h2 class="text-center my-5" style="color:  white;">Statistical and Analytic Report</h2>
-                <div style="height:670px;">
-                    {% autoescape off %}
-                    {{ plot_div }}
-                    {% endautoescape %}
+            {% for product in products %}
+            <div class="col-md-4">
+                <div class="card h-100">
+                    {% if product.image == "" %}
+                    <img class="card-img-top img-fluid" src="{% static 'Home/images/photo.jpeg' %}"
+                        alt="Card image cap">
 
+                    {% else %}
+                    <img class="card-img-top img-fluid" src="{{product.image.url}}" alt="Card image cap">
+
+                    {% endif %}
+                    <div class="card-body">
+                        <h3 class="card-title">{{product.name}}</h3>
+                        <p class="card-text">{{product.type}}</p>
+
+                        <p class="card-text"><small class="text-muted">{{product.seasonality}}</small></p>
+                    </div>
                 </div>
-
             </div>
-
+            {% endfor %}
         </div>
     </div>
-    </div>
+
+    {% autoescape off %}
+    {{ plot_div }}
+    {% endautoescape %}
+
+
+    <!-- <nav class="nav-container">
+
+        <ul>
+            <img class="image" src="{% static 'Home/images/downlaod-removebg-preview.png' %}" alt="">
+            <li>Home</li>
+            <li>Dashboard</li>
+            <li>Price Section</li>
+        </ul>
+    </nav> -->
 
 
     <script src="{% static 'Home/js/jquery.js' %}"></script>
     <script src="{% static 'Home/js/popper.js' %}"></script>
     <script src="{% static 'Home/js/bootstrap.js' %}"></script>
-</body>
 
+</body>
+<footer class="fixed-bottom">
+    <div class="container">
+        <p>Contact us:</p>
+        <p></p>
+        <p class="text-center text-muted">Copyright © 2021 Your Company</p>
+    </div>
+</footer>
 
 </html>
