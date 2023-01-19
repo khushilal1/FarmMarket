@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +11,43 @@
 
     <title>Document</title>
 </head>
-<body>
-    <h1>this is home page.</h1>
 
+<body>
+    <div class="container-fluid nav-background">
+        <nav class="navbar navbar-expand-sm navbar-dark nav-background py-3 ">
+            <a class="navbar-brand" href="">
+                FarmMarket
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item  active">
+                        <a style="color: black ;font-size: 20px;" class="nav-link" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: black ;font-size: 20px;" class="nav-link " href="">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: black ;font-size: 20px;" class="nav-link " href="">Price</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- <nav class="nav-container">
+
+        <ul>
+            <img class="image" src="{% static 'Home/images/downlaod-removebg-preview.png' %}" alt="">
+            <li>Home</li>
+            <li>Dashboard</li>
+            <li>Price Section</li>
+        </ul>
+    </nav> -->
 
 
     <script src="{% static 'Home/js/jquery.js' %}"></script>
@@ -20,4 +55,12 @@
     <script src="{% static 'Home/js/bootstrap.js' %}"></script>
 
 </body>
+<footer class="fixed-bottom">
+    <div class="container">
+        <p>Contact us:</p>
+        <p></p>
+        <p class="text-center text-muted">Copyright © 2021 Your Company</p>
+    </div>
+</footer>
+
 </html>
