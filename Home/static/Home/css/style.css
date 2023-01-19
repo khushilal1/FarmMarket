@@ -1,3 +1,39 @@
-h1{
-    color:red;
+h1 {
+  color: red;
+  font-size: 400px;
+}
+
+.nav-container {
+  background-color: rgba(15, 98, 27, 0.826);
+  height: 200px;
+}
+
+.nav-container ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  font-size: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: aliceblue;
+}
+
+.nav-container li {
+  margin-top: 40px;
+}
+
+.image {
+  margin-top: -100px;
+  margin-left: -200px;
+  height: 350px;
+}
+
+.nav-background {
+    background-color: green;
+  /* background-image: url("/static/Home/images/photo.jpeg"); */
+  background-size: 3000px;
+  background-repeat: no-repeat;
+}
+
+.custom-a{
+    color: black;
 }
