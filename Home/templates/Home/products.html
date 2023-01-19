@@ -46,9 +46,9 @@
         <div class="row">
             {% for product in products %}
             <div class="col-md-4">
-                <div class="card h-100">
+                <div class="card h-100 ,image" >
                     {% if product.image == "" %}
-                    <img class="card-img-top img-fluid" src="{% static 'Home/images/photo.jpeg' %}"
+                    <img  class="card-img-top img-fluid" src="{% static 'Home/images/photo.jpeg' %}"
                         alt="Card image cap">
 
                     {% else %}
@@ -58,8 +58,9 @@
                     <div class="card-body">
                         <h3 class="card-title">{{product.name}}</h3>
                         <p class="card-text">{{product.type}}</p>
+                        <p class="card-text">Rs.{{product.price}}</p>
 
-                        <p class="card-text"><small class="text-muted">{{product.seasonality}}</small></p>
+                        <p class="card-text"><small class="text-muted">Season:{{product.seasonality}}</small></p>
                     </div>
                 </div>
             </div>
