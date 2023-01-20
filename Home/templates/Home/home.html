@@ -36,8 +36,16 @@
                     <li class="nav-item">
                         <a style="color: white ;font-size: 20px;" class="nav-link "
                             href="{% url 'products' %}">Products</a>
-                    </li>
 
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: white ;font-size: 20px;" class="nav-link "
+                            href="{% url 'buyer' %}">Buyer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: white ;font-size: 20px;" class="nav-link "
+                            href="{% url 'seller' %}">Seller</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -47,7 +55,7 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 mt-3 mx-3" style="background-color: #a8e99b;border-radius:15px;">
                 <h2 class="text-center my-5" style="color:  white;">Statistical and Analytic Report</h2>
-                <div style="height:670px;">
+                <div style="height:500px;">
                     {% autoescape off %}
                     {{ plot_div }}
                     {% endautoescape %}

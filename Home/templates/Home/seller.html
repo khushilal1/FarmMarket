@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'Home/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'Home/css/style.css' %}">
+    <!-- <script src="{% static 'Home/js/plotly.min.js' %}"></script> -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{% static 'Home/js/plot.js' %}"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container-fluid nav-background">
+        <nav class="navbar navbar-expand-sm navbar-dark nav-background py-3 ">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                FarmMarket
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a style="color: white ;font-size: 20px;" class="nav-link "
+                            href="{% url 'home' %}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: white ;font-size: 20px;" class="nav-link "
+                            href="{% url 'products' %}">Products</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: white ;font-size: 20px;" class="nav-link "
+                            href="{% url 'buyer' %}">Buyer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: white ;font-size: 20px;" class="nav-link "
+                            href="{% url 'seller' %}">Seller</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="buyer">
+
+        <ul>
+            <li>
+                <div class="food">
+                    <p>Search food category</p>
+                    <select name="" id="">
+                        <option value="">Rice</option>
+                        <option value="">Maize</option>
+                        <option value="">Wheat</option>
+                    </select>
+                    <button>Submit</button>
+                </div>
+
+            </li>
+
+            <!-- //by date -->
+            <li>
+                <div class="date">
+                    <p>Search Date</p>
+                    <select name="" id="">
+                        <option value="">jan2</option>
+                        <option value="">jan3</option>
+                        <option value="">jan4</option>
+                    </select>
+                    <button>Submit</button>
+                </div>
+
+            </li>
+
+
+            <li>
+                <div class="">
+                    <p>Search by State</p>
+                    <select name="" id="">
+                        <option value="">Madhesh Pradesh</option>
+                        <option value="">Gandaki Pradesh</option>
+                        <option value="">Bagmati Pradesh</option>
+                    </select>
+                    <button>Submit</button>
+                </div>
+
+            </li>
+
+
+            <li>
+                <div class="">
+                    <p>Search by District</p>
+                    <select name="" id="">
+                        <option value="">Dhanusha</option>
+                        <option value="">Sunsari</option>
+                        <option value="">Morang</option>
+                    </select>
+                    <button>Submit</button>
+                </div>
+
+            </li>
+
+    </div>
+    </ul>
+    </div>
+
+
+    <div>
+        <div class="delear">Our Clients:</div>
+        <div class="box">
+            <div class="list">
+                <img style="width: 50%;margin-left:50px ; " src="{% static 'Home/images/abc.png' %}" alt="image">
+                <p style="font-weight:bold;text-align: center;font-size: 40px;color: rgb(43, 93, 93);">ABC Enterprises</p>
+
+               <span style="margin-left:20px; font-size: 30px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" fill="currentColor"
+                class="bi bi-telephone" viewBox="0 0 16 16">
+                <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+            </svg>
+               </span>:4567890
+            </div>
+
+
+
+
+          
+
+
+            <div class="list">
+                <img style="width: 50%;margin-left:50px ; " src="{% static 'Home/images/nr.png' %}" alt="image">
+                <p style="font-weight:bold;text-align: center;font-size: 40px;color: rgb(43, 93, 93);">NR Enterprises</p>
+
+               <span style="margin-left:20px; font-size: 30px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                class="bi bi-telephone" viewBox="0 0 16 16">
+                <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+            </svg>
+               </span>:4567890
+            </div>
+
+
+
+            <div class="list">
+                <img style="width: 50%;margin-left:50px ; " src="{% static 'Home/images/khushbu.png' %}" alt="image">
+                <p style="font-weight:bold;text-align: center;font-size: 40px;color: rgb(43, 93, 93);">KHUSHBU Enterprises</p>
+
+               <span style="margin-left:20px; font-size: 30px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                class="bi bi-telephone" viewBox="0 0 16 16">
+                <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+            </svg>
+               </span>:4567890
+            </div>
+
+            </div>
+
+            <!-- <div class="list">
+                <img style="width: 50%;margin-left:50px ; " src="{% static 'Home/images/abc.png' %}" alt="image">
+                <p style="font-weight:bold;text-align: center;font-size: 40px;color: rgb(43, 93, 93);">ABC Enterprises</p>
+
+               <span style="margin-left:20px; font-size: 30px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                class="bi bi-telephone" viewBox="0 0 16 16">
+                <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+            </svg>
+               </span>:4567890
+            </div> -->
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="{% static 'Home/js/jquery.js' %}"></script>
+    <script src="{% static 'Home/js/popper.js' %}"></script>
+    <script src="{% static 'Home/js/bootstrap.js' %}"></script>
+</body>
+
+
+</html>

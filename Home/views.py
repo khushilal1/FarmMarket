@@ -40,3 +40,8 @@ def graph_view(request,productname):
     
     return render(request,"Home/graphview.html",context={'plot_div': plot_div})
     
+def buyer(request):
+    return render(request,"Home/buyer.html")
+
+def seller(request):
+    return render(request,"Home/seller.html")
