@@ -5,3 +5,8 @@ from .models import Product
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['id','name','type_of_product','price','location','grade','seasonality','image']
+
+
+# @admin.register(Graph)
+# class GraphAdmin(admin.ModelAdmin):
+#     list_display = ['id','date','price']

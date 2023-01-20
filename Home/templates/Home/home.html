@@ -19,7 +19,7 @@
 
     <div class="container-fluid nav-background">
         <nav class="navbar navbar-expand-sm navbar-dark nav-background py-3 ">
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="{% url 'home' %}">
                 FarmMarket
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -28,16 +28,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item  active">
-                        <a style="color: white ;font-size: 20px;" class="nav-link" href="{% url 'home' %}">Home</a>
-                    </li>
+
                     <li class="nav-item">
                         <a style="color: white ;font-size: 20px;" class="nav-link "
                             href="{% url 'home' %}">Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <a style="color: white ;font-size: 20px;" class="nav-link "
-                            href="{% url 'products' %}">Price</a>
+                            href="{% url 'products' %}">Products</a>
                     </li>
 
                 </ul>

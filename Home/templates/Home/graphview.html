@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" href="{% static 'Home/css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'Home/css/style.css' %}">
-
-
     <title>Document</title>
 </head>
-
 <body>
     <div class="container-fluid nav-background">
         <nav class="navbar navbar-expand-sm navbar-dark nav-background py-3 ">
@@ -32,59 +28,22 @@
                     </li>
                     <li class="nav-item">
                         <a style="color: white ;font-size: 20px;" class="nav-link "
-                            href="{% url 'products' %}">Products</a>
+                            href="{% url 'products' %}">Price</a>
                     </li>
 
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="container">
-        <div class="row">
-            {% for product in products %}
-            <div class="col-md-4 mt-4">
-                <div class="card h-100 ,image" >
-                    {% if product.image == "" %}
-                    <img  class="card-img-top img-fluid" src="{% static 'Home/images/photo.jpeg' %}"
-                        alt="Card image cap">
-
-                    {% else %}
-                    <img class="card-img-top img-fluid" src="{{product.image.url}}" alt="Card image cap">
-
-                    {% endif %}
-                    <div class="card-body">
-                        <a href="{% url 'graph_view' product.name %}" style="text-decoration: none;"><h3 class="card-title">{{product.name}}</h3></a>
-                        <p class="card-text">{{product.type}}</p>
-                        <p class="card-text">Rs.{{product.price}}</p>
-
-                        <p class="card-text"><small class="text-muted">Season:{{product.seasonality}}</small></p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+    <div class="container-fluid my-5">
+        {% autoescape off %}
+        {{ plot_div }}
+        {% endautoescape %}
     </div>
-
-    {% autoescape off %}
-    {{ plot_div }}
-    {% endautoescape %}
-
-
-    <!-- <nav class="nav-container">
-
-        <ul>
-            <img class="image" src="{% static 'Home/images/downlaod-removebg-preview.png' %}" alt="">
-            <li>Home</li>
-            <li>Dashboard</li>
-            <li>Price Section</li>
-        </ul>
-    </nav> -->
-
 
     <script src="{% static 'Home/js/jquery.js' %}"></script>
     <script src="{% static 'Home/js/popper.js' %}"></script>
     <script src="{% static 'Home/js/bootstrap.js' %}"></script>
 
 </body>
-
 </html>
